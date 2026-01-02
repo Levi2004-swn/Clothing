@@ -1,0 +1,116 @@
+/* ============================================
+   NOTICE MODAL (Generic modal-style notice)
+   Reuses visual language of auth prompt, but standalone
+============================================ */
+.notice-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.notice-modal {
+  width: min(420px, 92vw);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: notice-pop 0.18s ease-out;
+}
+
+.notice-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notice-modal-header .icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  color: #fff;
+  flex: 0 0 28px;
+}
+
+.notice-modal-header .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  flex: 1;
+}
+
+.notice-modal-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.notice-modal-body {
+  padding: 16px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Type variants */
+.notice-success .icon { background: #22c55e; }
+.notice-error .icon { background: #ef4444; }
+.notice-warning .icon { background: #f59e0b; }
+.notice-info .icon { background: #3b82f6; }
+
+@keyframes notice-pop {
+  from { transform: translateY(6px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ============================================
+   TOAST NOTIFICATIONS (non-blocking, no overlay)
+============================================ */
+.toast-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10010;
+}
+
+.toast {
+  min-width: 220px;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 4px solid #3b82f6; /* default info color */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: toast-slide-in 0.2s ease-out;
+}
+
+.toast .icon { font-weight: 700; }
+.toast-success { border-left-color: #22c55e; }
+.toast-error { border-left-color: #ef4444; }
+.toast-warning { border-left-color: #f59e0b; }
+.toast-info { border-left-color: #3b82f6; }
+
+@keyframes toast-slide-in {
+  from { transform: translateY(-6px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

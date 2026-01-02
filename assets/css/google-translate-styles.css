@@ -1,0 +1,201 @@
+/* ===================================
+   GOOGLE TRANSLATE STYLES
+   =================================== */
+
+/* Google Translate Container */
+.google-translate {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.google-translate i.fa-language {
+    margin-right: 5px;
+    color: #fff;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+#google_translate_element {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Hide Google Translate Banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* Hide the top frame that Google Translate adds */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+#goog-gt-tt {
+    display: none !important;
+}
+
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+div#goog-gt- {
+    display: none !important;
+}
+
+/* Style the Translate Gadget */
+.goog-te-gadget {
+    font-family: inherit !important;
+    font-size: 13px !important;
+    color: #fff !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-size: 13px !important;
+}
+
+.goog-te-gadget-simple:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Hide the Google Translate icon */
+.goog-te-gadget-icon {
+    display: none !important;
+}
+
+/* Style the text */
+.goog-te-menu-value {
+    color: #fff !important;
+}
+
+.goog-te-menu-value span {
+    color: #fff !important;
+}
+
+.goog-te-menu-value span:first-child {
+    color: #fff !important;
+}
+
+.goog-te-menu-value span:hover {
+    color: #ffd700 !important;
+}
+
+/* Remove "Powered by" text */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* Hide "Translate" text before dropdown */
+.goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+    display: inline !important;
+}
+
+/* Dropdown Menu Styling */
+.goog-te-menu-frame {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 4px !important;
+    border: 1px solid #ddd !important;
+}
+
+.goog-te-menu2 {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    border: none !important;
+}
+
+.goog-te-menu2-item div,
+.goog-te-menu2-item:link div,
+.goog-te-menu2-item:visited div,
+.goog-te-menu2-item:active div {
+    color: #333 !important;
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+}
+
+.goog-te-menu2-item:hover div {
+    background-color: #f5f5f5 !important;
+}
+
+.goog-te-menu2-item-selected div {
+    background-color: #4285f4 !important;
+    color: #fff !important;
+}
+
+/* Responsive Design for Translate Widget */
+@media (max-width: 768px) {
+    .google-translate {
+        margin-right: 10px;
+    }
+    
+    .google-translate i.fa-language {
+        display: none;
+    }
+    
+    .goog-te-gadget-simple {
+        padding: 4px 8px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .google-translate {
+        margin-right: 5px;
+    }
+    
+    .goog-te-gadget-simple {
+        padding: 3px 6px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* Fix for layout issues when translation is active */
+body.translated-ltr {
+    top: 0 !important;
+}
+
+body.translated-rtl {
+    top: 0 !important;
+}
+
+/* Ensure page content doesn't shift */
+.skiptranslate {
+    display: inline-block !important;
+}
+
+/* Additional fixes for iframe issues */
+iframe.goog-te-banner-frame {
+    display: none !important;
+}
+
+iframe.skiptranslate {
+    display: none !important;
+}
+
+body > .skiptranslate {
+    display: none !important;
+}
+
+/* Fix for the dropdown arrow */
+.goog-te-gadget-simple .goog-te-menu-value span:last-child {
+    display: inline !important;
+    font-size: 10px !important;
+    margin-left: 4px !important;
+}
